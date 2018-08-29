@@ -1,0 +1,75 @@
+
+span {
+   
+    display: inline-block;
+    width: 4em;
+    text-align: justify;
+    line-height:20px;
+    height:20px;
+    overflow:hidden;
+}
+span::after{
+    content:'';
+    display: inline-block;
+    width: 100%;
+   
+    
+}
+.psw{
+	margin-top:10px;
+}
+.content{
+    display: flex;
+    flex-direction: row ;  
+}
+input{
+box-shadow: 10px 10px 231px -16px rgba(0,0,0,0.75);
+border-radius: 5px 5px 5px 5px;
+}
+.myButton {
+	-moz-box-shadow: 2px 2px 0px 0px #91b8b3;
+	-webkit-box-shadow: 2px 2px 0px 0px #91b8b3;
+	box-shadow: 2px 2px 0px 0px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #4e9c9c));
+	background:-moz-linear-gradient(top, #768d87 5%, #4e9c9c 100%);
+	background:-webkit-linear-gradient(top, #768d87 5%, #4e9c9c 100%);
+	background:-o-linear-gradient(top, #768d87 5%, #4e9c9c 100%);
+	background:-ms-linear-gradient(top, #768d87 5%, #4e9c9c 100%);
+	background:linear-gradient(to bottom, #768d87 5%, #4e9c9c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#4e9c9c',GradientType=0);
+	background-color:#768d87;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:1px 2px 0px #2b665e;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4e9c9c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #4e9c9c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #4e9c9c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #4e9c9c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #4e9c9c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #4e9c9c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e9c9c', endColorstr='#768d87',GradientType=0);
+	background-color:#4e9c9c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.f_page{
+	border:1px solid  #2b665e;
+	height:70px;
+	width:300px;
+	margin: auto;
+   
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.css">
+    <title>登录</title>
+</head>
+<body>
+
+    <div class="f_page">
+        <form method="post" action="/validationUser"name="loginform"  id="loginform">
+                <div class="content">
+                        <span>用户名：</span>
+                         <input type="text" placeholder="email/phone" name="name" id="username">
+                 </div>
+                 <div class="content"> 
+                            <span> 密码：</span>
+                             <input type="password" placeholder="at least 6 number"name="password" id="password">
+                 </div>
+                </form>
+                 <div class="login">
+                 <a href="#" class="myButton" onclick="login()"></a>
+                    <a href="">注册</a>
+        
+                </div>
+        </div >
+       
+            
+            
+       
+        
+        
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+ 
+        function login(loginform){//传入表单参数
+            if($("#username").val()==""){       //验证用户名是否为空
+                alert("请输入用户名！");$("#username").focus();return false;
+            }
+            if($("#password").val()==""){       //验证密码是否为空
+                alert("请输入密码！");$("#password").focus();return false;
+            }   
+            var param="/validationUser" ;//将登录信息连接成字符串，作为发送请求的参数
+            $.ajax({
+                url:param,
+                data:{
+                	"name":$("#username").val(),
+                	"password":$("#password").val()
+                	
+                },
+                type:"POST",
+                dataType:"json",
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',//防止乱码
+                success:function(data){
+                    if(data == false){
+                        alert("您输入的用户名或密码有错！");loginform.username.focus();return false;
+                    }else{
+                        window.location.href = "index.html";//跳转到主页
+                    }
+                }
+            });
+        }
+     
+
+        </script>
+        
+    
+</body>
+</html>
